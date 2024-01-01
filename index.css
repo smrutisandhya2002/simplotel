@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff7171;
+    padding: 0 20px;
+}
+.side-nav {
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    width: fit-content;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.6);
+}
+.nav-menu  {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+ 
+}
+.nav-item {
+    text-decoration: none;
+    list-style: none;
+    min-width: 100px;
+}
+
+.nav-item a{
+  text-decoration: none;
+  width: fit-content;
+  color: #000;
+  transition: transform 0.2s ease-in-out;
+  font-family: "Times New Roman", Times, serif; 
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 22px;
+}
+
+.nav-item a:hover {
+    transform: scale(1.1);
+}
+
+.bar {
+    height: 2px;
+    width: 16px;
+    background-color: #000;
+}
+.bar:not(:last-child) {
+    margin-bottom: 2px;
+}
+
+.card , .card-2{
+    display: flex;
+    background: linear-gradient(to bottom right, #fff6ad, #feaaf6);
+    height: 100vh;
+}
+.card {
+    margin-bottom: 4px; 
+}
+.card-image-left * {
+    min-height: 150px;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+.card-image-right * {
+    min-height: 300px;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+.card-image-left-1 {
+    background-image: url('pexels-rachel-claire-6752433.jpg');
+    margin-bottom: 4px;
+} 
+.card-image-left-2 {
+    background-image: url('pexels-eva-bronzini-6141651.jpg');
+}
+.card-image-right-1 {
+    background-image: url('pexels-mister-mister-3434523.jpg');
+}
+.card-text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  margin: 64px;
+  text-align: left;
+}
+
+.card .card-header h1{
+    font-size: 3.2em;
+    margin-bottom: 30px;
+    color: #000000; 
+    letter-spacing: 8px;
+  }
+
+.card-2 .card-text {
+    background-color: #ff7171;
+    padding: 50px;
+    max-height: 150px;
+    max-width: 350px;
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+}
+
+.card-2 .card-header h1{
+   font-weight: 200;
+   line-height: 16px;
+   font-size: small;
+ }
+.card-2 .card-description {
+    font-size: larger;
+    font-weight: 700;
+}
+.card-description {
+   color: #000;
+   font-weight: 400;
+   line-height: 24px;
+   font-size: 16px;
+   margin-top: 20px;
+}
+.card-button {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  width: fit-content;
+  text-align: center;
+}
+.card .card-button {
+    background-color: #ff7171;
+    min-width: 120px;
+    padding: 10px 0 ;
+    border-radius: 2px;
+}
+.card .card-button button {
+    color: #fff;
+}
+.card-2 .card-button button{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #000;
+}
+button {
+    background-color: transparent;
+    border: none;
+}
+.card .card-image {
+    flex: 0 0 50%;
+    background-image: url('pexels-robin-stickel-70497.jpg');
+    background-position: center;
+    background-size: cover
+}
+.card-2 .card-image {
+    display: flex;
+    flex: 0 0 50%;
+    height: inherit;
+    gap: 20px;
+    overflow: hidden;
+}
+.menu-icon {
+    max-width: 30px;
+    margin: 4px 20px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+}
+.dropdown-content {
+    justify-content: center;
+    display: none;
+    position: absolute;
+    background-color: #ff7171; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2; 
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    z-index: 2;
+}
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #000;
+    z-index: 2;
+}
+.dropdown-content a:hover {
+    background-color: #ff7171;
+    z-index: 2;
+}
+.card-button button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+.card-2 .card-image-left {
+    height: 50%;
+    width: 50%;
+}
+.card-2 .card-image-right {
+    height: auto;
+    width: 50%;
+}
+
+@media screen and (max-width: 992px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block; 
+        max-width: 30px; 
+        margin: 4px 20px; 
+    }
+
+    .dropdown {
+        position: relative; 
+        display: inline-block; 
+        z-index: 2; 
+    }
+
+    .dropdown-content {
+        display: none; 
+        position: absolute;
+        background-color: #ff7171; 
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 2;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block; 
+    }
+
+    .dropdown-content a {
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: #000;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ff7171;
+    }
+
+    .card, .card-2 {
+        flex-direction: column;
+    }
+    .card .card-image {
+        height: 200px !important;
+        width: 100%;
+        order: 1;
+        flex: none;
+    }
+    .card .card-text {
+        order: 2;
+    }
+  }
+  .card-image-left-1:hover,.card-image-left-2:hover,.card-image-right:hover,.card .card-image:hover {
+      transform: scale(1.01);
+      transition: ease-in-out .2s;
+      overflow: hidden;
+  }
